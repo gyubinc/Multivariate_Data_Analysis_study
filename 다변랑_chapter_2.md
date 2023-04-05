@@ -18,7 +18,7 @@
 
 **Variable(X)**
 
-* Age, Color, Door, Weight, HP, KM...
+* Age, Color, Door, Weight, HP, KM..
 
 <br/>
 

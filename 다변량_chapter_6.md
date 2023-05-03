@@ -265,7 +265,7 @@ $\alpha$가 너무 작을 경우, 너무 느림
 
 **적절한 learning rate 필요**
 
-Adam, RMSProp 등의 방법론 사용
+Adam, RMSProp 등의 방법론 자주 이용
 
 <br/>
 

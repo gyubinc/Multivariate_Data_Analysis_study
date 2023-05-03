@@ -181,17 +181,13 @@ Not sure
 
 $$
 f(w + \Delta w) = f(w) + \frac{f'(w)}{1!}\Delta w + \frac{f''(w)}{2!}\Delta w + \cdots
-
 $$
 
 $$
-\\
 w_{new} = w_{old} - \alpha f'(w),\quad where\; 0 < \alpha < 1
-
 $$
 
 $$
-
 f(w_{new}) = f(w_{old} - \alpha f'(w_{old})) \cong f(w_{old}) - \alpha|f'(w)]^2 < f(w_{old})
 $$
 

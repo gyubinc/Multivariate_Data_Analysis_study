@@ -26,7 +26,4 @@
 
 An organism with only 1 neuron
 
-![image]('https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/374196cc38cae0f1a695defb1b8fa772b7492774/image_folder/6_1.png')
-
-
-
+<img src='https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/374196cc38cae0f1a695defb1b8fa772b7492774/image_folder/6_1.png'/>

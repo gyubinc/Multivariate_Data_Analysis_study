@@ -26,7 +26,7 @@
 
 An organism with only 1 neuron
 
-[perceptron]('image_folder/6_1.png')
+![image]('image_folder/6_1.png')
 
 
 

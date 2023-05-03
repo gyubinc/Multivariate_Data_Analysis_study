@@ -8,7 +8,7 @@
 # 6) Artificial Neural Networks
 ---
 
-## Perceptron
+# Perceptron
 
 <br/>
 
@@ -142,4 +142,132 @@ loss는 개별적인 값, cost는 모델 전체적인 값에 대한 설명
 
 ## Gradient Descent
 
+<img src='https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/ff83fb11cdb4b7d02d8ab08e65ffea484be3ecd7/image_folder/6_4.png'>
+
+Blue line : minimize 해야 하는 목적함수
+
+Black circle : 현재의 solution
+
+화살표의 방향 : 현재 solution의 qulity를 올리기 위해 움직일 방향
+
+Gradient : 1차 미분값
+
+* 현재 Gradient가 양수이므로 Cost를 낮추기 위해서는 x축 방향으로 왼쪽, 즉 w를 감소시켜야 함
+
+### 방법론
+
+**1\. 현재 gradient가 0인가?**
+
+Yes -> 학습 종료
+
+No -> 학습 진행
+
+
+**2\. gradient가 0이 되기 위해 어떻게 해야 하는가?**
+
+gradient와 반대 방향으로 current weight를 이동한다
+
+**3\. 얼마나 움직여야 하는가?**
+
+Not sure
+
+* 조금씩 이동하며 수렴을 기대한다
+
+<br/>
+
+### Theoretical Background
+
+아주 작은 w의 변화율에 대해
+
+$$
+f(w + \Delta w) = f(w) + \frac{f'(w)}{1!}\Delta w + \frac{f''(w)}{2!}\Delta w + \cdots
+
+$$
+
+$$
+\\
+w_{new} = w_{old} - \alpha f'(w),\quad where\; 0 < \alpha < 1
+
+$$
+
+$$
+
+f(w_{new}) = f(w_{old} - \alpha f'(w_{old})) \cong f(w_{old}) - \alpha|f'(w)]^2 < f(w_{old})
+$$
+
+**Use chain rule**
+
+$$
+\frac{\partial L}{\partial y} = y-t \quad \frac{\partial y}{\partial h} = 1
+$$
+
+<br/>
+
+$$
+\frac{\partial h}{\partial a} = \frac{exp(-a)}{(1+exp(-a))^2} = \frac{1}{1 + exp(-a)} \cdot \frac{exp(-a)}{1 + exp(-a)} = h(1-h)
+$$
+
+<br/>
+
+$$
+\frac{\partial a}{\partial w_i} = x_i
+$$
+
+
+**Gradients for w and x**
+
+$$
+\frac{\partial L}{\partial w_i} = \frac{\partial L}{\partial y} \cdot \frac{\partial y}{\partial h}  \cdot \frac{\partial h}{\partial a} \cdot \frac{\partial a}{\partial w_i}  = (y-t) \cdot 1 \cdot h(1-h) \cdot x_i
+$$
+
+<br/>
+
+$$
+{w_i}^{new} = {w_i}^{old} - \alpha \times (y-t) \cdot 1 \cdot h(1-h) \cdot x_i
+$$
+
+1. 현재의 출력값(y)과 정답(t)이 차이가 많이 날 수록 가중치를 많이 업데이트
+
+2. 대상 가중치와 연결된 입력 변수의 값이 클 수록 가중치를 많이 업데이트
+
+<br/>
+
+## Issue 1
+
+얼마나 자주 가중치를 업데이트 하는가?
+
+<img src ='https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/267696db500ec0da877c46e7772c3ad2e1ad0c25/image_folder/6_5.png'>
+
+
+### Stochastic Gradient Descent(SGD)
+
+개별적 instance를 가지고 weight update
+
+<br/>
+
+### Batch Gradient Descent(BGD)
+
+모든 instance를 사용해 loss를 평균낸 후 한번에 weight update
+
+### Mini-Batch Gradient Descent
+
+SGD와 BGD의 절충안
+
+N개의 instance를 사용해 weight-update 
+
+## Issue 2
+
+한번에 얼마나 업데이트 하는가?
+
+$\alpha$가 너무 클 경우, 발산 가능성 있음
+
+$\alpha$가 너무 작을 경우, 너무 느림
+
+**적절한 learning rate 필요**
+
+Adam, RMSProp 등의 방법론 사용
+
+<br/>
+
+# Multi-layer Perceptron(MLP)
 

@@ -232,7 +232,7 @@ $$
 
 얼마나 자주 가중치를 업데이트 하는가?
 
-<img src ='image_folder\6_5.png'>
+<img src ='https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/267696db500ec0da877c46e7772c3ad2e1ad0c25/image_folder/6_5.png'>
 
 
 ### Stochastic Gradient Descent(SGD)
@@ -296,4 +296,72 @@ Multiple linaer regression
 |No. of lines|1|No restriction|User defined|
 |Direction of lines|No restriction|Vertical to an axis|No restriction|
 
+<br/>
 
+## Basic Structure
+
+Feed-forward Neural Network with One Hidden Layer
+
+### Regression
+
+<img src = 'https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/ab449bfd672fe079afecb0ac9e33a76819590ef9/image_folder/6_6.png'>
+
+The output node is a combination of all perceptrons
+
+### Classification
+
+<img src = 'https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/ab449bfd672fe079afecb0ac9e33a76819590ef9/image_folder/6_7.png'>
+
+N. of output nodes = N. of classes
+
+<br/>
+
+## The role of hidden nodes
+
+인공 신경망(ANN)의 복잡도(complexity) 결정하는 역할
+
+### Goal
+
+best prediction을 만들어내는 weight를 찾는 과정
+
+### Features
+
+* 순전파-역전파 과정을 모든 record를 반복하며 작동
+
+* 매 step마다 actual target과 prediction을 비교
+
+* 비교된 차이는 output node의 error
+
+* error는 모든 hidden node로 전달되어 가중치를 업데이트함
+
+### Why it works
+
+* 큰 error는 큰 weight의 변화를 이끌어냄
+
+* 작은 error는 상대적으로 작은 변화를 이끌어냄
+
+* error가 무시할만큼 작아졌을 때 weight 변화 중단
+
+### Common criteria to stop updating
+
+* 가중치 변화율이 충분히 작을 때
+
+* 지정한 Threshold 보다 misclassification rate가 적어질 때
+
+* 지정한 epoch 수에 도달했을 때
+
+<br/>
+
+## Overfitting
+
+너무 많은 iteration은 overfitting을 유발
+
+### How to avoid
+
+* validation data를 tracking한다
+
+* iteration을 제한한다
+
+* network의 complexity를 줄인다
+
+* N. of hidden layers, node를 조절한다

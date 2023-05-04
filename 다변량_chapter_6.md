@@ -232,7 +232,7 @@ $$
 
 얼마나 자주 가중치를 업데이트 하는가?
 
-<img src ='https://github.com/gyubinc/Multivariate_Data_Analysis_study/blob/267696db500ec0da877c46e7772c3ad2e1ad0c25/image_folder/6_5.png'>
+<img src ='image_folder\6_5.png'>
 
 
 ### Stochastic Gradient Descent(SGD)
@@ -266,4 +266,34 @@ Adam, RMSProp 등의 방법론 자주 이용
 <br/>
 
 # Multi-layer Perceptron(MLP)
+
+## Limitation of Linear Model
+
+**1\. Classification**
+
+Linear한 Hyper plane으로 구별
+
+* Linear class boundary만 생성 가능
+
+**2\. Regression**
+
+Multiple linaer regression
+
+* 변수간 linear relationship 설명가능
+
+**비선형 관계의 예측이 불가능하다**
+
+<br/>
+
+## Combine multiple perceptrons!
+
+복잡한 문제를 작고 간단한 문제들오 decompose하자
+
+### Decision boundary of MLP
+
+||Logistic Regression|Decision Tree|MLP|
+|:---:|:---:|:---:|:---:|
+|No. of lines|1|No restriction|User defined|
+|Direction of lines|No restriction|Vertical to an axis|No restriction|
+
 
